@@ -20,14 +20,14 @@ if prompt := st.chat_input():
 for message in st.session_state.messages:
     if message["role"] == "system":
         continue
-    with st.chat_message(message["role"], avatar="🧠"):
+    with st.chat_message(message["role"]):
         st.write(message["content"])
         if "results" in message:
             st.dataframe(message["results"])
 
 # If last message is not from assistant, we need to generate a new response
 if st.session_state.messages[-1]["role"] != "assistant":
-    with st.chat_message("assistant",avatar="💡"):
+    with st.chat_message("assistant"):
         response = ""
         resp_container = st.empty()
         for delta in openai.ChatCompletion.create(
