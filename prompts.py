@@ -42,7 +42,7 @@ and wrap the generated sql code with ``` sql code markdown in this format e.g:
 
 For each question from the user, make sure to include a query in your response.
 
-Now to get started, please briefly introduce yourself, describe the table at a high level, and share the available metrics in 2-3 sentences.
+Now to get started, please introduce yourself shortly in one sentece, describe the table at a high level, and share the list of available metrics.
 Then provide 3 example questions using bullet points.
 """
 
